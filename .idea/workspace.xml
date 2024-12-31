@@ -23,29 +23,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c90f041e-212c-44dc-9e7d-fdeb514bbc8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/enemy.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="c90f041e-212c-44dc-9e7d-fdeb514bbc8f" name="Changes" comment="Introduce player animations, new level elements, enemies, and a state machine">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/background/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/background/foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/background/middleground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/wall_dark.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets.h" beforeDir="false" afterPath="$PROJECT_DIR$/assets.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enemy/electro0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/enemy/electro1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/player_jump_backwards.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_jump_backwards.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/player_stand_backwards.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_stand_backwards.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/player_walk_backwards/player0.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_backwards/player0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/player_walk_backwards/player1.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_backwards/player1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/player_walk_backwards/player2.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_backwards/player2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/player_walk_forward/player0.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_forward/player0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/player_walk_forward/player1.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_forward/player1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/player_walk_forward/player2.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_forward/player2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/spikes.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/spikes.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globals.h" beforeDir="false" afterPath="$PROJECT_DIR$/globals.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphics.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphics.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/level.h" beforeDir="false" afterPath="$PROJECT_DIR$/level.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/platformer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.h" beforeDir="false" afterPath="$PROJECT_DIR$/player.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,8 +113,17 @@
       <workItem from="1735541412873" duration="13237000" />
       <workItem from="1735570683655" duration="883000" />
       <workItem from="1735578158260" duration="530000" />
-      <workItem from="1735619524816" duration="1317000" />
+      <workItem from="1735619524816" duration="5691000" />
     </task>
+    <task id="LOCAL-00001" summary="Introduce player animations, new level elements, enemies, and a state machine">
+      <option name="closed" value="true" />
+      <created>1735622027522</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735622027522</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,5 +133,9 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Introduce player animations, new level elements, enemies, and a state machine" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce player animations, new level elements, enemies, and a state machine" />
   </component>
 </project>

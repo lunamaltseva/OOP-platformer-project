@@ -31,6 +31,10 @@ void load_images() {
     player_walk_backwards_sprite    = load_sprite("data/images/player_walk_backwards/player", ".png", 3, true, 15);
 
     enemy_walk = load_sprite("data/images/enemy_walk/enemy", ".png", 2, true, 15);
+
+    background        = LoadTexture("data/images/background/background.png");
+    middleground      = LoadTexture("data/images/background/middleground.png");
+    foreground        = LoadTexture("data/images/background/foreground.png");
 }
 
 void unload_images() {

@@ -74,7 +74,8 @@ void draw_game() {
             break;
 
         case GAME_STATE:
-            ClearBackground({92, 148, 252, 0});
+            ClearBackground(BLACK);
+            draw_parallax_background();
             draw_level();
             draw_game_overlay();
             break;

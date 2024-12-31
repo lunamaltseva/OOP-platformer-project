@@ -15,8 +15,8 @@ void draw_text(Text &text) {
 }
 
 void derive_graphics_metrics_from_loaded_level() {
-    screen_size.x  = static_cast<float>(GetScreenWidth());
-    screen_size.y = static_cast<float>(GetScreenHeight());
+    screen_size.x  = static_cast<float>(GetRenderWidth());
+    screen_size.y = static_cast<float>(GetRenderHeight());
 
     cell_size = std::min(
         screen_size.x,
@@ -27,8 +27,11 @@ void derive_graphics_metrics_from_loaded_level() {
         screen_size.y
     ) / SCREEN_SCALE_DIVISOR;
 
-    float level_width  = static_cast<float>(current_level.columns) * cell_size;
-    float level_height = static_cast<float>(current_level.rows)    * cell_size;
+    background_size = {
+            screen_size.x,
+            screen_size.x/16*10
+    };
+    background_y_offset = (screen_size.y - background_size.y) * 0.5f;
 }
 
 void draw_menu() {
@@ -36,9 +39,35 @@ void draw_menu() {
     draw_text(game_subtitle);
 }
 
+void draw_parallax_background() {
+    float initial_offset      = -player_pos.x * PARALLAX_SCROLLING_SPEED;
+    float background_offset   = initial_offset;
+    float middleground_offset = background_offset * PARALLAX_DIFFERENCE_SPEED;
+    float foreground_offset   = middleground_offset * PARALLAX_DIFFERENCE_SPEED;
+
+    background_offset   = fmod(background_offset, 1.0f);
+    middleground_offset = fmod(middleground_offset, 1.0f);
+    foreground_offset   = fmod(foreground_offset, 1.0f);
+
+    background_offset   *= screen_size.x;
+    middleground_offset *= screen_size.x;
+    foreground_offset   *= screen_size.x;
+
+    draw_image(background, {background_offset + screen_size.x, background_y_offset}, background_size.x, background_size.y);
+    draw_image(background, {background_offset,                 background_y_offset}, background_size.x, background_size.y);
+
+    draw_image(middleground, {middleground_offset + screen_size.x, background_y_offset}, background_size.x, background_size.y);
+    draw_image(middleground, {middleground_offset,                 background_y_offset}, background_size.x, background_size.y);
+
+    draw_image(foreground, {foreground_offset + screen_size.x, background_y_offset}, background_size.x, background_size.y);
+    draw_image(foreground, {foreground_offset,                 background_y_offset}, background_size.x, background_size.y);
+}
+
 void draw_game_overlay() {
-    Vector2 dimensions = MeasureTextEx(menu_font, std::to_string(player_score).c_str(), 48.0f * screen_scale, 2.0f);
-    DrawTextEx(menu_font, std::to_string(player_score).c_str(), {GetScreenWidth()-dimensions.x, 12.0f}, dimensions.y, 2.0f, WHITE);
+    Vector2 score_dimensions = MeasureTextEx(menu_font, std::to_string(player_score).c_str(), 48.0f * screen_scale, 2.0f);
+    DrawTextEx(menu_font, std::to_string(player_score).c_str(), {GetScreenWidth() - score_dimensions.x, 12.0f}, score_dimensions.y, 2.0f, WHITE);
+
+
 }
 
 void draw_level() {
