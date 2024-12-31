@@ -19,11 +19,34 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=C:\Users\light\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake" />
+      <configuration PROFILE_NAME="Debug-Visual Studio" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Visual Studio" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=C:\Users\light\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99bcdf57-b512-4f88-b40b-fc171849d29b" name="Changes" comment="Init project" />
+    <list default="true" id="c90f041e-212c-44dc-9e7d-fdeb514bbc8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/enemy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets.h" beforeDir="false" afterPath="$PROJECT_DIR$/assets.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/enemy/electro0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/enemy/electro1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/player_jump_backwards.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_jump_backwards.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/player_stand_backwards.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_stand_backwards.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/player_walk_backwards/player0.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_backwards/player0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/player_walk_backwards/player1.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_backwards/player1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/player_walk_backwards/player2.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_backwards/player2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/player_walk_forward/player0.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_forward/player0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/player_walk_forward/player1.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_forward/player1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/player_walk_forward/player2.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/player_walk_forward/player2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/spikes.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/spikes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/globals.h" beforeDir="false" afterPath="$PROJECT_DIR$/globals.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphics.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/level.h" beforeDir="false" afterPath="$PROJECT_DIR$/level.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/platformer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.h" beforeDir="false" afterPath="$PROJECT_DIR$/player.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,15 +55,9 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Visual Studio" />
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="showcase" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -63,362 +80,53 @@
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2mnDaA4wjSbo1znYxwetuuvCFRU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2qnLspGy7hytz7yqUDIHCa6CTD3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "CMake Application.platformer.executor": "Run",
-    "CMake Application.sokoban.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/light/CLionProjects/functional-platformer-project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake Application.platformer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\light\CLionProjects\simple-platformer-project\data\screenshots" />
-    </key>
-  </component>
-  <component name="RunManager" selected="CMake Application.platformer">
-    <configuration name="platformer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="true" USE_EXTERNAL_CONSOLE="true" EMULATE_TERMINAL="false" WORKING_DIR="file://$ProjectFileDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="platformer" TARGET_NAME="platformer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="platformer" RUN_TARGET_NAME="platformer">
+}</component>
+  <component name="RunManager">
+    <configuration name="platformer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$ProjectFileDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="platformer" TARGET_NAME="platformer" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="platformer" RUN_TARGET_NAME="platformer">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sokoban" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$ProjectFileDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="platformer" TARGET_NAME="sokoban" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="platformer" RUN_TARGET_NAME="sokoban">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="CMake Application.platformer" />
-      <item itemvalue="CMake Application.sokoban" />
-    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="99bcdf57-b512-4f88-b40b-fc171849d29b" name="Changes" comment="" />
-      <created>1727703507998</created>
+      <changelist id="c90f041e-212c-44dc-9e7d-fdeb514bbc8f" name="Changes" comment="" />
+      <created>1735293602112</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1727703507998</updated>
-      <workItem from="1727703509204" duration="2132000" />
-      <workItem from="1727705700568" duration="581000" />
-      <workItem from="1727781692909" duration="4317000" />
-      <workItem from="1727797013902" duration="693000" />
-      <workItem from="1728718540496" duration="4361000" />
-      <workItem from="1728735284969" duration="4725000" />
-      <workItem from="1728740623326" duration="1532000" />
-      <workItem from="1728742843805" duration="15000" />
-      <workItem from="1728742880216" duration="18000" />
-      <workItem from="1728742921776" duration="57000" />
-      <workItem from="1728742995950" duration="379000" />
-      <workItem from="1728790751717" duration="401000" />
-      <workItem from="1728791238848" duration="377000" />
-      <workItem from="1728829458638" duration="2854000" />
-      <workItem from="1728912775141" duration="1905000" />
-      <workItem from="1728914864727" duration="1889000" />
-      <workItem from="1728919852049" duration="1269000" />
-      <workItem from="1728989878164" duration="5201000" />
-      <workItem from="1728997074146" duration="190000" />
-      <workItem from="1728999135994" duration="453000" />
-      <workItem from="1729000575293" duration="3000" />
-      <workItem from="1729048768917" duration="265000" />
-      <workItem from="1729050423007" duration="4000" />
-      <workItem from="1729084835066" duration="7851000" />
-      <workItem from="1729134744178" duration="552000" />
-      <workItem from="1729135548722" duration="773000" />
-      <workItem from="1729137404690" duration="81000" />
-      <workItem from="1729140725771" duration="56000" />
-      <workItem from="1729144588622" duration="1931000" />
-      <workItem from="1729165083158" duration="80000" />
-      <workItem from="1729179222281" duration="42000" />
-      <workItem from="1729336880704" duration="129000" />
-      <workItem from="1729599006156" duration="1302000" />
-      <workItem from="1729600326410" duration="219000" />
-      <workItem from="1729600556795" duration="40000" />
-      <workItem from="1729935438637" duration="5000" />
-      <workItem from="1730644282175" duration="106000" />
-      <workItem from="1730782443835" duration="5000" />
-      <workItem from="1731337518676" duration="91000" />
-      <workItem from="1731550796544" duration="3000" />
-      <workItem from="1731571590701" duration="3969000" />
-      <workItem from="1731587606085" duration="123000" />
-      <workItem from="1731722682484" duration="372000" />
-      <workItem from="1731733476326" duration="6303000" />
-      <workItem from="1731739839347" duration="10466000" />
-      <workItem from="1731755366953" duration="7786000" />
-      <workItem from="1731804866154" duration="4211000" />
-      <workItem from="1731809235230" duration="2373000" />
-      <workItem from="1731811757576" duration="11000" />
-      <workItem from="1731812022840" duration="290000" />
-      <workItem from="1731814121579" duration="1067000" />
-      <workItem from="1731817277637" duration="483000" />
-      <workItem from="1731858917786" duration="729000" />
-      <workItem from="1732339188728" duration="6000" />
-      <workItem from="1732340763262" duration="1515000" />
-      <workItem from="1732343330026" duration="4234000" />
-      <workItem from="1732350467513" duration="237000" />
-      <workItem from="1732350714308" duration="1667000" />
-      <workItem from="1732355282162" duration="2310000" />
-      <workItem from="1732365350371" duration="1147000" />
-      <workItem from="1732373102021" duration="686000" />
-      <workItem from="1732375241834" duration="221000" />
-      <workItem from="1732376028594" duration="257000" />
-      <workItem from="1732377257856" duration="332000" />
-      <workItem from="1732422639327" duration="846000" />
-      <workItem from="1732424078119" duration="188000" />
-      <workItem from="1732445597797" duration="544000" />
-      <workItem from="1732447567070" duration="2167000" />
-      <workItem from="1732552161711" duration="54000" />
-      <workItem from="1733551489894" duration="180000" />
-      <workItem from="1733888773661" duration="161000" />
-      <workItem from="1734361428559" duration="296000" />
-      <workItem from="1734765644627" duration="234000" />
-      <workItem from="1735283742093" duration="264000" />
-      <workItem from="1735284033637" duration="1182000" />
-      <workItem from="1735285404735" duration="2000" />
-      <workItem from="1735285791311" duration="1484000" />
-      <workItem from="1735287722245" duration="9000" />
-      <workItem from="1735287752233" duration="30000" />
-      <workItem from="1735287813257" duration="85000" />
-      <workItem from="1735287962562" duration="51000" />
-      <workItem from="1735288055454" duration="4509000" />
-      <workItem from="1735292811884" duration="148000" />
+      <updated>1735293602112</updated>
+      <workItem from="1735293604287" duration="56000" />
+      <workItem from="1735294293011" duration="2847000" />
+      <workItem from="1735537843898" duration="363000" />
+      <workItem from="1735540863448" duration="538000" />
+      <workItem from="1735541412873" duration="13237000" />
+      <workItem from="1735570683655" duration="883000" />
+      <workItem from="1735578158260" duration="530000" />
+      <workItem from="1735619524816" duration="1317000" />
     </task>
-    <task id="LOCAL-00001" summary="Initial commit">
-      <option name="closed" value="true" />
-      <created>1727797507794</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1727797507794</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Save commit">
-      <option name="closed" value="true" />
-      <created>1728739332247</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1728739332247</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Reconfigured collisions, introduced scaling and textures">
-      <option name="closed" value="true" />
-      <created>1728743369260</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1728743369260</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Updated assets">
-      <option name="closed" value="true" />
-      <created>1728832320928</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1728832320928</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Improved player controls, optimized and cleared up collision checking code">
-      <option name="closed" value="true" />
-      <created>1728916758757</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1728916758757</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Introduced stages, implemented text, added victory animation, retextured files">
-      <option name="closed" value="true" />
-      <created>1728994856950</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1728994856950</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Added sounds">
-      <option name="closed" value="true" />
-      <created>1728999447532</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1728999447532</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Redrew assets and changed the font, transitioned everything from float coordinates to Vector2, added cleanup code and forward declared everything, added comments to explain some parts of code">
-      <option name="closed" value="true" />
-      <created>1729091401304</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1729091401304</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Re-thought the x-axis collision detection system increasing precision, moved collision detection code from utils.h to level.h">
-      <option name="closed" value="true" />
-      <created>1729135039784</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1729135039784</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Include &lt;cmath&gt; in globals.h for GCC compiler">
-      <option name="closed" value="true" />
-      <created>1729135792556</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1729135792556</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Add background texture">
-      <option name="closed" value="true" />
-      <created>1729600577101</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1729600577101</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Add background texture">
-      <option name="closed" value="true" />
-      <created>1729600582406</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1729600582406</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Fully transition to OOP, add player animation, begin working on subsystems">
-      <option name="closed" value="true" />
-      <created>1731587686650</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1731587686650</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Added enemies, coins, keys, and abilities to the game">
-      <option name="closed" value="true" />
-      <created>1731749049588</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1731749049588</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Add story, music, sounds, and menus">
-      <option name="closed" value="true" />
-      <created>1731810578333</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1731810578333</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Add sounds">
-      <option name="closed" value="true" />
-      <created>1731810594066</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1731810594066</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Complete game content-vise">
-      <option name="closed" value="true" />
-      <created>1731859528147</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1731859528147</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Improve ceiling collision detection">
-      <option name="closed" value="true" />
-      <created>1732348722433</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1732348722433</updated>
-    </task>
-    <task id="LOCAL-00019" summary="clean up code and prepare for demo">
-      <option name="closed" value="true" />
-      <created>1732351212789</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1732351212789</updated>
-    </task>
-    <task id="LOCAL-00020" summary="finished project">
-      <option name="closed" value="true" />
-      <created>1732357086276</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1732357086276</updated>
-    </task>
-    <task id="LOCAL-00021" summary="polished project">
-      <option name="closed" value="true" />
-      <created>1732449475224</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1732449475224</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Add a readme">
-      <option name="closed" value="true" />
-      <created>1735285020875</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1735285020875</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Begin working on project">
-      <option name="closed" value="true" />
-      <created>1735290779137</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1735290779137</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Revert accidental push">
-      <option name="closed" value="true" />
-      <created>1735291107290</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1735291107290</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Init project">
-      <option name="closed" value="true" />
-      <created>1735291620633</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1735291620633</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Init project">
-      <option name="closed" value="true" />
-      <created>1735291726891</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1735291726891</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Init project">
-      <option name="closed" value="true" />
-      <created>1735291898935</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1735291898935</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,35 +136,5 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
-    <MESSAGE value="Initial commit" />
-    <MESSAGE value="Save commit" />
-    <MESSAGE value="Reconfigured collisions, introduced scaling and textures" />
-    <MESSAGE value="Updated assets" />
-    <MESSAGE value="Improved player controls, optimized and cleared up collision checking code" />
-    <MESSAGE value="Introduced stages, implemented text, added victory animation, retextured files" />
-    <MESSAGE value="Added sounds" />
-    <MESSAGE value="Redrew assets and changed the font, transitioned everything from float coordinates to Vector2, added cleanup code and forward declared everything, added comments to explain some parts of code" />
-    <MESSAGE value="Re-thought the x-axis collision detection system increasing precision, moved collision detection code from utils.h to level.h" />
-    <MESSAGE value="Include &lt;cmath&gt; in globals.h for GCC compiler" />
-    <MESSAGE value="Add background texture" />
-    <MESSAGE value="Fully transition to OOP, add player animation, begin working on subsystems" />
-    <MESSAGE value="Added enemies, coins, keys, and abilities to the game" />
-    <MESSAGE value="Add story, music, sounds, and menus" />
-    <MESSAGE value="Add sounds" />
-    <MESSAGE value="Complete game content-vise" />
-    <MESSAGE value="Improve ceiling collision detection" />
-    <MESSAGE value="clean up code and prepare for demo" />
-    <MESSAGE value="finished project" />
-    <MESSAGE value="polished project" />
-    <MESSAGE value="Add a readme" />
-    <MESSAGE value="Begin working on project" />
-    <MESSAGE value="Revert accidental push" />
-    <MESSAGE value="Init project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init project" />
   </component>
 </project>

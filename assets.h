@@ -17,7 +17,8 @@ void unload_fonts() {
 
 void load_images() {
     wall_image        = LoadTexture("data/images/wall.png");
-    air_image         = LoadTexture("data/images/air.png");
+    wall_dark_image   = LoadTexture("data/images/wall_dark.png");
+    spike_image       = LoadTexture("data/images/spikes.png");
     exit_image        = LoadTexture("data/images/exit.png");
     coin_sprite       = load_sprite("data/images/coin/coin",     ".png", 3, true, 18);
 
@@ -28,11 +29,12 @@ void load_images() {
     player_dead_image               = LoadTexture("data/images/player_dead.png");
     player_walk_forward_sprite      = load_sprite("data/images/player_walk_forward/player", ".png", 3, true, 15);
     player_walk_backwards_sprite    = load_sprite("data/images/player_walk_backwards/player", ".png", 3, true, 15);
+
+    enemy_walk = load_sprite("data/images/enemy_walk/enemy", ".png", 2, true, 15);
 }
 
 void unload_images() {
     UnloadTexture(wall_image);
-    UnloadTexture(air_image);
     UnloadTexture(exit_image);
     unload_sprite(coin_sprite);
 }

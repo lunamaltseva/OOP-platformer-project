@@ -4,6 +4,8 @@
 #include "globals.h"
 
 void spawn_player() {
+    player_y_velocity = 0;
+
     for (size_t row = 0; row < current_level.rows; ++row) {
         for (size_t column = 0; column < current_level.columns; ++column) {
             char cell = current_level.data[row * current_level.columns + column];
@@ -19,16 +21,19 @@ void spawn_player() {
 
 void move_player_horizontally(float delta) {
     float next_x = player_pos.x + delta;
-    if (!is_colliding({next_x, player_pos.y}, WALL))
+    if (!is_colliding({next_x, player_pos.y}, WALL)) {
         player_pos.x = next_x;
-    else
+    }
+    else {
         player_pos.x = roundf(player_pos.x);
+        return;
+    }
 
     is_looking_forward = delta > 0;
     if (delta != 0) is_moving = true;
 }
 
-void update_player() {
+void update_player_gravity() {
     if (is_colliding({player_pos.x, player_pos.y - 0.1f}, WALL) && player_y_velocity < 0) {
         player_y_velocity = 0.05;
     }
@@ -42,6 +47,10 @@ void update_player() {
         player_y_velocity = 0;
         player_pos.y = roundf(player_pos.y);
     }
+}
+
+void update_player() {
+    update_player_gravity();
 
     // Interacting with other level elements
     if (is_colliding(player_pos, COIN)) {
@@ -52,6 +61,9 @@ void update_player() {
     if (is_colliding(player_pos, EXIT)) {
         load_level(1);
         PlaySound(exit_sound);
+    }
+    if (is_colliding(player_pos, SPIKE) || is_colliding_with_enemies(player_pos) || player_pos.y > current_level.rows) {
+        game_state = DEATH_STATE;
     }
 }
 

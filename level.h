@@ -4,13 +4,13 @@
 #include "globals.h"
 
 bool is_colliding(Vector2 pos, char look_for, level &level) {
-    Rectangle player_hitbox = {pos.x, pos.y, 1.0f, 1.0f};
+    Rectangle entity_hitbox = {pos.x, pos.y, 1.0f, 1.0f};
 
     for (size_t row = pos.y - 1; row < pos.y + 1; ++row) {
         for (size_t column = pos.x - 1; column < pos.x + 1; ++column) {
             if (level.data[row * level.columns + column] == look_for) {
                 Rectangle block_hitbox = {(float) column, (float) row, 1.0f, 1.0f};
-                if (CheckCollisionRecs(player_hitbox, block_hitbox)) {
+                if (CheckCollisionRecs(entity_hitbox, block_hitbox)) {
                     return true;
                 }
             }
@@ -59,6 +59,7 @@ void load_level(int offset) {
     current_level = {rows, columns, current_level_data};
 
     spawn_player();
+    spawn_enemies();
     derive_graphics_metrics_from_loaded_level();
 }
 

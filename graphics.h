@@ -37,20 +37,8 @@ void draw_menu() {
 }
 
 void draw_game_overlay() {
-    Text score = {
-        "Score " + std::to_string(player_score),
-        {0.50f, 0.05f},
-        48.0f
-    };
-    Text score_shadow = {
-        "Score " + std::to_string(player_score),
-        {0.503f, 0.055f},
-        48.0f,
-        GRAY
-    };
-
-    draw_text(score_shadow);
-    draw_text(score);
+    Vector2 dimensions = MeasureTextEx(menu_font, std::to_string(player_score).c_str(), 48.0f * screen_scale, 2.0f);
+    DrawTextEx(menu_font, std::to_string(player_score).c_str(), {GetScreenWidth()-dimensions.x, 12.0f}, dimensions.y, 2.0f, WHITE);
 }
 
 void draw_level() {
@@ -69,6 +57,12 @@ void draw_level() {
                 case WALL:
                     draw_image(wall_image, pos, cell_size);
                     break;
+                case WALL_DARK:
+                    draw_image(wall_dark_image, pos, cell_size);
+                    break;
+                case SPIKE:
+                    draw_image(spike_image, pos, cell_size);
+                    break;
                 case COIN:
                     draw_sprite(coin_sprite, pos, cell_size);
                     break;
@@ -82,6 +76,7 @@ void draw_level() {
     }
 
     draw_player();
+    draw_enemies();
 }
 
 void draw_player() {
@@ -105,7 +100,19 @@ void draw_player() {
         }
     }
     else draw_image(player_dead_image, pos, cell_size);
+}
 
+void draw_enemies() {
+    for (int i = 0; i < total_enemies; i++) {
+        horizontal_shift = (screen_size.x - cell_size) / 2;
+
+        Vector2 pos = {
+                (enemies[i].pos.x - player_pos.x) * cell_size + horizontal_shift,
+                enemies[i].pos.y * cell_size
+        };
+
+        draw_sprite(enemy_walk, pos, cell_size);
+    }
 }
 
 void draw_pause_menu() {

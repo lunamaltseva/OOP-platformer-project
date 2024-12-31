@@ -3,6 +3,7 @@
 #include "globals.h"
 #include "level.h"
 #include "player.h"
+#include "enemy.h"
 #include "graphics.h"
 #include "assets.h"
 #include "utilities.h"
@@ -21,11 +22,11 @@ void update_game() {
 
         case GAME_STATE:
             if (IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D)) {
-                move_player_horizontally(MOVEMENT_SPEED);
+                move_player_horizontally(PLAYER_MOVEMENT_SPEED);
             }
 
             if (IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A)) {
-                move_player_horizontally(-MOVEMENT_SPEED);
+                move_player_horizontally(-PLAYER_MOVEMENT_SPEED);
             }
 
             // Calculating collisions to decide whether the player is allowed to jump: don't want them to suction cup to the ceiling or jump midair
@@ -35,6 +36,7 @@ void update_game() {
             }
 
             update_player();
+            update_enemies();
 
             if (IsKeyPressed(KEY_ESCAPE)) {
                 game_state = PAUSED_STATE;
@@ -43,6 +45,14 @@ void update_game() {
 
         case PAUSED_STATE:
             if (IsKeyPressed(KEY_ESCAPE)) {
+                game_state = GAME_STATE;
+            }
+            break;
+
+        case DEATH_STATE:
+            update_player_gravity();
+            if (IsKeyPressed(KEY_ENTER)) {
+                load_level(0);
                 game_state = GAME_STATE;
             }
             break;
@@ -67,6 +77,15 @@ void draw_game() {
             ClearBackground({92, 148, 252, 0});
             draw_level();
             draw_game_overlay();
+            break;
+
+        case DEATH_STATE:
+            ClearBackground({92, 148, 252, 0});
+            draw_level();
+            draw_game_overlay();
+            DrawRectangle(0, 0, GetRenderWidth(), GetRenderHeight(), {0, 0, 0, 100});
+            draw_text(death_title);
+            draw_text(death_subtitle);
             break;
 
         case PAUSED_STATE:
