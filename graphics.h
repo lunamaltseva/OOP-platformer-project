@@ -40,7 +40,7 @@ void draw_menu() {
 }
 
 void draw_parallax_background() {
-    float initial_offset      = -player_pos.x * PARALLAX_SCROLLING_SPEED;
+    float initial_offset      = -player_pos.x * PARALLAX_SCROLLING_SPEED - game_frame * 0.00005f;
     float background_offset   = initial_offset;
     float middleground_offset = background_offset * PARALLAX_DIFFERENCE_SPEED;
     float foreground_offset   = middleground_offset * PARALLAX_DIFFERENCE_SPEED;
@@ -64,10 +64,22 @@ void draw_parallax_background() {
 }
 
 void draw_game_overlay() {
-    Vector2 score_dimensions = MeasureTextEx(menu_font, std::to_string(player_score).c_str(), 48.0f * screen_scale, 2.0f);
-    DrawTextEx(menu_font, std::to_string(player_score).c_str(), {GetScreenWidth() - score_dimensions.x, 12.0f}, score_dimensions.y, 2.0f, WHITE);
+    float ICON_SIZE = 48.0f;
+    ICON_SIZE*=screen_scale;
 
+    for (int i = 0; i < player_lives; i++) {
+        draw_image(heart_image, {ICON_SIZE*i+ICON_SIZE/12.0f, 0}, ICON_SIZE);
+    }
 
+    Text time{
+        std::to_string(level_time/60),
+        {0.5f, 0.05f}
+    };
+    draw_text(time);
+
+    Vector2 score_dimensions = MeasureTextEx(menu_font, (std::to_string(player_score) + "x").c_str(), ICON_SIZE, 2.0f);
+    DrawTextEx(menu_font, (std::to_string(player_score) + "x").c_str(), {GetRenderWidth() - score_dimensions.x - ICON_SIZE, 0}, ICON_SIZE, 2.0f, WHITE);
+    draw_sprite(coin_sprite, {GetRenderWidth() - ICON_SIZE, 0}, ICON_SIZE);
 }
 
 void draw_level() {

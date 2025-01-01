@@ -6,6 +6,9 @@
 bool is_colliding(Vector2 pos, char look_for, level &level) {
     Rectangle entity_hitbox = {pos.x, pos.y, 1.0f, 1.0f};
 
+    // Prevent the game from crashing on GNU/Linux
+    if (pos.y > level.rows - 1 || pos.x > level.columns - 1) return false;
+
     for (size_t row = pos.y - 1; row < pos.y + 1; ++row) {
         for (size_t column = pos.x - 1; column < pos.x + 1; ++column) {
             if (level.data[row * level.columns + column] == look_for) {

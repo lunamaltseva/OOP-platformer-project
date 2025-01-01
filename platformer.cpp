@@ -81,7 +81,8 @@ void draw_game() {
             break;
 
         case DEATH_STATE:
-            ClearBackground({92, 148, 252, 0});
+            ClearBackground(BLACK);
+            draw_parallax_background();
             draw_level();
             draw_game_overlay();
             DrawRectangle(0, 0, GetRenderWidth(), GetRenderHeight(), {0, 0, 0, 100});

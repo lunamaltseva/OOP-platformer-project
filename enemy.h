@@ -13,7 +13,6 @@ void spawn_enemies() {
 
             if (cell == ENEMY) {
                 enemies[total_enemies++] = {{static_cast<float>(column), static_cast<float>(row)}, true};
-                std::cout << total_enemies << std::endl;
             }
         }
     }
@@ -42,6 +41,21 @@ bool is_colliding_with_enemies(Vector2 pos) {
         }
     }
     return false;
+}
+
+void remove_colliding_enemy(Vector2 pos) {
+    Rectangle entity_hitbox = {pos.x, pos.y, 1.0f, 1.0f};
+
+    for (int i = 0; i < total_enemies; i++) {
+        Rectangle enemy_hitbox = {(float) enemies[i].pos.x, (float) enemies[i].pos.y, 1.0f, 1.0f};
+        if (CheckCollisionRecs(entity_hitbox, enemy_hitbox)) {
+            for (int j = i+1; j < 10; j++) {
+                enemies[j-1] = enemies[j];
+            }
+            total_enemies--;
+            return;
+        }
+    }
 }
 
 #endif //ENEMY_H

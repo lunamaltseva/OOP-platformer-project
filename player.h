@@ -41,7 +41,6 @@ void update_player_gravity() {
     player_pos.y += player_y_velocity;
     player_y_velocity += GRAVITY_FORCE;
 
-
     is_player_on_ground = is_colliding({player_pos.x, player_pos.y + 0.1f}, WALL);
     if (is_player_on_ground) {
         player_y_velocity = 0;
@@ -55,16 +54,30 @@ void update_player() {
     // Interacting with other level elements
     if (is_colliding(player_pos, COIN)) {
         get_collider(player_pos, COIN) = ' '; // Remove the coin
-        player_score+=10;
+        player_score++;
         PlaySound(coin_sound);
     }
     if (is_colliding(player_pos, EXIT)) {
         load_level(1);
         PlaySound(exit_sound);
     }
-    if (is_colliding(player_pos, SPIKE) || is_colliding_with_enemies(player_pos) || player_pos.y > current_level.rows) {
+    if (is_colliding(player_pos, SPIKE) || player_pos.y > current_level.rows) {
         game_state = DEATH_STATE;
+        player_lives--;
     }
+
+    if (is_colliding_with_enemies(player_pos)) {
+        if (player_y_velocity > 0) {
+            remove_colliding_enemy(player_pos);
+            player_y_velocity = -BOUNCE_OFF_ENEMY;
+        }
+        else {
+            game_state = DEATH_STATE;
+            player_lives--;
+        }
+    }
+
+    level_time--;
 }
 
 #endif //PLAYER_H
