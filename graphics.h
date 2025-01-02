@@ -40,45 +40,54 @@ void draw_menu() {
 }
 
 void draw_parallax_background() {
-    float initial_offset      = -player_pos.x * PARALLAX_SCROLLING_SPEED - game_frame * 0.00005f;
-    float background_offset   = initial_offset;
-    float middleground_offset = background_offset * PARALLAX_DIFFERENCE_SPEED;
-    float foreground_offset   = middleground_offset * PARALLAX_DIFFERENCE_SPEED;
+    // First uses the player's position
+    float initial_offset      = -player_pos.x * PARALLAX_PLAYER_SCROLLING_SPEED - game_frame * PARALLAX_IDLE_SCROLLING_SPEED;
 
+    // Calculate offsets for different layers
+    float background_offset   = initial_offset;
+    float middleground_offset = background_offset * PARALLAX_LAYER_SPEED_DIFFERENCE;
+    float foreground_offset   = middleground_offset * PARALLAX_LAYER_SPEED_DIFFERENCE;
+
+    // Wrap offsets to create a loop effect
     background_offset   = fmod(background_offset, 1.0f);
     middleground_offset = fmod(middleground_offset, 1.0f);
     foreground_offset   = fmod(foreground_offset, 1.0f);
 
+    // Scale to screen size
     background_offset   *= screen_size.x;
     middleground_offset *= screen_size.x;
     foreground_offset   *= screen_size.x;
 
-    draw_image(background, {background_offset + screen_size.x, background_y_offset}, background_size.x, background_size.y);
-    draw_image(background, {background_offset,                 background_y_offset}, background_size.x, background_size.y);
+    // Each layer is drawn twice, side by side, the first starting from its offset, and the other from its offset + screen_size
+    // This ensures a seamless scrolling effect when one copy moves out of the screen, as the second jumps into its place.
+    draw_image(background,   {background_offset + screen_size.x, background_y_offset},   background_size.x, background_size.y);
+    draw_image(background,   {background_offset,                 background_y_offset},   background_size.x, background_size.y);
 
     draw_image(middleground, {middleground_offset + screen_size.x, background_y_offset}, background_size.x, background_size.y);
     draw_image(middleground, {middleground_offset,                 background_y_offset}, background_size.x, background_size.y);
 
-    draw_image(foreground, {foreground_offset + screen_size.x, background_y_offset}, background_size.x, background_size.y);
-    draw_image(foreground, {foreground_offset,                 background_y_offset}, background_size.x, background_size.y);
+    draw_image(foreground,   {foreground_offset + screen_size.x, background_y_offset},   background_size.x, background_size.y);
+    draw_image(foreground,   {foreground_offset,                 background_y_offset},   background_size.x, background_size.y);
 }
 
 void draw_game_overlay() {
     float ICON_SIZE = 48.0f;
     ICON_SIZE*=screen_scale;
 
+    // Hearts
     for (int i = 0; i < player_lives; i++) {
         draw_image(heart_image, {ICON_SIZE*i+ICON_SIZE/12.0f, 0}, ICON_SIZE);
     }
 
-    Text time{
-        std::to_string(level_time/60),
-        {0.5f, 0.05f}
-    };
-    draw_text(time);
+    // Timer
+    Vector2 timer_dimensions = MeasureTextEx(menu_font, std::to_string(level_time/60).c_str(), ICON_SIZE, 2.0f);
+    Vector2 timer_position = {(GetRenderWidth() - timer_dimensions.x) * 0.5f, 0};
+    DrawTextEx(menu_font, std::to_string(level_time/60).c_str(), timer_position, ICON_SIZE, 2.0f, WHITE);
 
-    Vector2 score_dimensions = MeasureTextEx(menu_font, (std::to_string(player_score) + "x").c_str(), ICON_SIZE, 2.0f);
-    DrawTextEx(menu_font, (std::to_string(player_score) + "x").c_str(), {GetRenderWidth() - score_dimensions.x - ICON_SIZE, 0}, ICON_SIZE, 2.0f, WHITE);
+    // Score
+    Vector2 score_dimensions = MeasureTextEx(menu_font, std::to_string(player_score).c_str(), ICON_SIZE, 2.0f);
+    Vector2 score_position = {GetRenderWidth() - score_dimensions.x - ICON_SIZE, 0};
+    DrawTextEx(menu_font, std::to_string(player_score).c_str(), score_position, ICON_SIZE, 2.0f, WHITE);
     draw_sprite(coin_sprite, {GetRenderWidth() - ICON_SIZE, 0}, ICON_SIZE);
 }
 

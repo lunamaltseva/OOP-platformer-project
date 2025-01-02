@@ -24,10 +24,10 @@ void update_enemies() {
         next_x += (enemies[i].is_looking_right ? ENEMY_MOVEMENT_SPEED : -ENEMY_MOVEMENT_SPEED);
         if (is_colliding({next_x, enemies[i].pos.y}, WALL)) {
             enemies[i].is_looking_right = !enemies[i].is_looking_right;
-            return;
         }
-        else
+        else {
             enemies[i].pos.x = next_x;
+        }
     }
 }
 
@@ -49,8 +49,8 @@ void remove_colliding_enemy(Vector2 pos) {
     for (int i = 0; i < total_enemies; i++) {
         Rectangle enemy_hitbox = {(float) enemies[i].pos.x, (float) enemies[i].pos.y, 1.0f, 1.0f};
         if (CheckCollisionRecs(entity_hitbox, enemy_hitbox)) {
-            for (int j = i+1; j < 10; j++) {
-                enemies[j-1] = enemies[j];
+            for (int j = i + 1; j < MAX_ENEMIES; j++) {
+                enemies[j - 1] = enemies[j];
             }
             total_enemies--;
             return;

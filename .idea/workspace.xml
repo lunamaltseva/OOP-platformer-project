@@ -19,21 +19,24 @@
   </component>
   <component name="CMakeSettings">
     <configurations>
-      <configuration PROFILE_NAME="Debug-Visual Studio" ENABLED="true" CONFIG_NAME="Debug" TOOLCHAIN_NAME="Visual Studio" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=C:\Users\light\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake" />
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=&quot;C:\Users\light\.vcpkg-clion\vcpkg (1)\scripts\buildsystems\vcpkg.cmake&quot;" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c90f041e-212c-44dc-9e7d-fdeb514bbc8f" name="Changes" comment="Introduce player animations, new level elements, enemies, and a state machine">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/background/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/background/foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/background/middleground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/wall_dark.png" afterDir="false" />
+    <list default="true" id="d3432718-89d8-4899-9bad-81c8ca6eb9a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets.h" beforeDir="false" afterPath="$PROJECT_DIR$/assets.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/background/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/background/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/background/foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/background/foreground.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/wall.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/images/wall_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/wall_dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/enemy.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globals.h" beforeDir="false" afterPath="$PROJECT_DIR$/globals.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphics.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphics.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/platformer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/level.h" beforeDir="false" afterPath="$PROJECT_DIR$/level.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.h" beforeDir="false" afterPath="$PROJECT_DIR$/player.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-Visual Studio" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -62,13 +65,14 @@
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2024" />
-    <option name="minorVersion" value="2.0.1" />
+    <option name="minorVersion" value="3.1.1" />
     <option name="productBranch" value="Classic" />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
 }</component>
-  <component name="ProjectId" id="2qnLspGy7hytz7yqUDIHCa6CTD3" />
+  <component name="ProjectId" id="2r1qwh7aNcZhhbRMzPtEnxrsDSn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -78,7 +82,9 @@
     &quot;CMake Application.platformer.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -87,12 +93,13 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RunManager">
-    <configuration name="platformer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$ProjectFileDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="platformer" TARGET_NAME="platformer" CONFIG_NAME="Debug-Visual Studio" RUN_TARGET_PROJECT_NAME="platformer" RUN_TARGET_NAME="platformer">
+    <configuration name="platformer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$ProjectFileDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="platformer" TARGET_NAME="platformer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="platformer" RUN_TARGET_NAME="platformer">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -101,29 +108,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c90f041e-212c-44dc-9e7d-fdeb514bbc8f" name="Changes" comment="" />
-      <created>1735293602112</created>
+      <changelist id="d3432718-89d8-4899-9bad-81c8ca6eb9a3" name="Changes" comment="" />
+      <created>1735737170517</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1735293602112</updated>
-      <workItem from="1735293604287" duration="56000" />
-      <workItem from="1735294293011" duration="2847000" />
-      <workItem from="1735537843898" duration="363000" />
-      <workItem from="1735540863448" duration="538000" />
-      <workItem from="1735541412873" duration="13237000" />
-      <workItem from="1735570683655" duration="883000" />
-      <workItem from="1735578158260" duration="530000" />
-      <workItem from="1735619524816" duration="5691000" />
+      <updated>1735737170517</updated>
+      <workItem from="1735737171939" duration="7809000" />
+      <workItem from="1735792914227" duration="3038000" />
+      <workItem from="1735796394489" duration="12000" />
+      <workItem from="1735798891891" duration="70000" />
+      <workItem from="1735798988784" duration="9473000" />
     </task>
-    <task id="LOCAL-00001" summary="Introduce player animations, new level elements, enemies, and a state machine">
-      <option name="closed" value="true" />
-      <created>1735622027522</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1735622027522</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,9 +128,5 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Introduce player animations, new level elements, enemies, and a state machine" />
-    <option name="LAST_COMMIT_MESSAGE" value="Introduce player animations, new level elements, enemies, and a state machine" />
   </component>
 </project>

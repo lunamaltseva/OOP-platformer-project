@@ -19,6 +19,17 @@ void spawn_player() {
     }
 }
 
+void increment_player_score() {
+    PlaySound(coin_sound);
+    player_score++;
+}
+
+void kill_player() {
+    PlaySound(player_death_sound);
+    game_state = DEATH_STATE;
+    player_lives--;
+}
+
 void move_player_horizontally(float delta) {
     float next_x = player_pos.x + delta;
     if (!is_colliding({next_x, player_pos.y}, WALL)) {
@@ -54,26 +65,26 @@ void update_player() {
     // Interacting with other level elements
     if (is_colliding(player_pos, COIN)) {
         get_collider(player_pos, COIN) = ' '; // Remove the coin
-        player_score++;
-        PlaySound(coin_sound);
+        increment_player_score();
     }
     if (is_colliding(player_pos, EXIT)) {
         load_level(1);
         PlaySound(exit_sound);
     }
     if (is_colliding(player_pos, SPIKE) || player_pos.y > current_level.rows) {
-        game_state = DEATH_STATE;
-        player_lives--;
+        kill_player();
     }
 
     if (is_colliding_with_enemies(player_pos)) {
         if (player_y_velocity > 0) {
             remove_colliding_enemy(player_pos);
+            PlaySound(kill_enemy_sound);
+
+            increment_player_score();
             player_y_velocity = -BOUNCE_OFF_ENEMY;
         }
         else {
-            game_state = DEATH_STATE;
-            player_lives--;
+            kill_player();
         }
     }
 
