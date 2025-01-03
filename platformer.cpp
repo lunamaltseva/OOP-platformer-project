@@ -51,16 +51,33 @@ void update_game() {
 
         case DEATH_STATE:
             update_player_gravity();
+
             if (IsKeyPressed(KEY_ENTER)) {
-                load_level(0);
+                if (player_lives > 0) {
+                    load_level(0);
+                    game_state = GAME_STATE;
+                }
+                else {
+                    game_state = GAME_OVER_STATE;
+                }
+            }
+            break;
+
+        case GAME_OVER_STATE:
+            if (IsKeyPressed(KEY_ENTER)) {
+                reset_level_index();
+                reset_player_stats();
                 game_state = GAME_STATE;
+                load_level(0);
             }
             break;
 
         case VICTORY_STATE:
             if (IsKeyPressed(KEY_ENTER) || IsKeyPressed(KEY_ESCAPE)) {
-                SetExitKey(KEY_ESCAPE);
+                reset_level_index();
+                reset_player_stats();
                 game_state = MENU_STATE;
+                SetExitKey(KEY_ESCAPE);
             }
             break;
     }
@@ -82,12 +99,12 @@ void draw_game() {
 
         case DEATH_STATE:
             ClearBackground(BLACK);
-            draw_parallax_background();
-            draw_level();
-            draw_game_overlay();
-            DrawRectangle(0, 0, GetRenderWidth(), GetRenderHeight(), {0, 0, 0, 100});
-            draw_text(death_title);
-            draw_text(death_subtitle);
+            draw_death_screen();
+            break;
+
+        case GAME_OVER_STATE:
+            ClearBackground(BLACK);
+            draw_game_over_menu();
             break;
 
         case PAUSED_STATE:

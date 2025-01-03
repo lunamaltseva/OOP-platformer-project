@@ -16,13 +16,13 @@ void unload_fonts() {
 }
 
 void load_images() {
-    wall_image        = LoadTexture("data/images/wall.png");
-    wall_dark_image   = LoadTexture("data/images/wall_dark.png");
-    spike_image       = LoadTexture("data/images/spikes.png");
-    exit_image        = LoadTexture("data/images/exit.png");
+    wall_image                      = LoadTexture("data/images/wall.png");
+    wall_dark_image                 = LoadTexture("data/images/wall_dark.png");
+    spike_image                     = LoadTexture("data/images/spikes.png");
+    exit_image                      = LoadTexture("data/images/exit.png");
 
-    coin_sprite       = load_sprite("data/images/coin/coin",     ".png", 3, true, 18);
-    heart_image       = LoadTexture("data/images/heart.png");
+    coin_sprite                     = load_sprite("data/images/coin/coin", ".png", 3, true, 18);
+    heart_image                     = LoadTexture("data/images/heart.png");
 
     player_stand_forward_image      = LoadTexture("data/images/player_stand_forward.png");
     player_stand_backwards_image    = LoadTexture("data/images/player_stand_backwards.png");
@@ -32,11 +32,11 @@ void load_images() {
     player_walk_forward_sprite      = load_sprite("data/images/player_walk_forward/player", ".png", 3, true, 15);
     player_walk_backwards_sprite    = load_sprite("data/images/player_walk_backwards/player", ".png", 3, true, 15);
 
-    enemy_walk = load_sprite("data/images/enemy_walk/enemy", ".png", 2, true, 15);
+    enemy_walk                      = load_sprite("data/images/enemy_walk/enemy", ".png", 2, true, 15);
 
-    background        = LoadTexture("data/images/background/background.png");
-    middleground      = LoadTexture("data/images/background/middleground.png");
-    foreground        = LoadTexture("data/images/background/foreground.png");
+    background                      = LoadTexture("data/images/background/background.png");
+    middleground                    = LoadTexture("data/images/background/middleground.png");
+    foreground                      = LoadTexture("data/images/background/foreground.png");
 }
 
 void unload_images() {

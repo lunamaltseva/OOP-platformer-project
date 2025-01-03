@@ -23,19 +23,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3432718-89d8-4899-9bad-81c8ca6eb9a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="d3432718-89d8-4899-9bad-81c8ca6eb9a3" name="Changes" comment="Introduce sounds and levels">
+      <change afterPath="$PROJECT_DIR$/data/levels.sl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets.h" beforeDir="false" afterPath="$PROJECT_DIR$/assets.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/background/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/background/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/background/foreground.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/background/foreground.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/wall.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/wall.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/images/wall_dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/images/wall_dark.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/enemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/enemy.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/globals.h" beforeDir="false" afterPath="$PROJECT_DIR$/globals.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graphics.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphics.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/level.h" beforeDir="false" afterPath="$PROJECT_DIR$/level.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/platformer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.h" beforeDir="false" afterPath="$PROJECT_DIR$/player.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,8 +113,21 @@
       <workItem from="1735792914227" duration="3038000" />
       <workItem from="1735796394489" duration="12000" />
       <workItem from="1735798891891" duration="70000" />
-      <workItem from="1735798988784" duration="9473000" />
+      <workItem from="1735798988784" duration="9681000" />
+      <workItem from="1735809047254" duration="2000" />
+      <workItem from="1735809542369" duration="338000" />
+      <workItem from="1735880752202" duration="4799000" />
+      <workItem from="1735887968193" duration="9892000" />
     </task>
+    <task id="LOCAL-00001" summary="Introduce sounds and levels">
+      <option name="closed" value="true" />
+      <created>1735808970157</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735808970157</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,5 +137,9 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Introduce sounds and levels" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introduce sounds and levels" />
   </component>
 </project>

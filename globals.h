@@ -9,14 +9,14 @@
 
 /* Game Elements */
 
-const char WALL      = '#';
-const char WALL_DARK = '=';
-const char AIR       = '-';
-const char SPIKE     = '^';
-const char PLAYER    = '@';
-const char ENEMY     = '&';
-const char COIN      = '*';
-const char EXIT      = 'E';
+const char WALL      = '#',
+           WALL_DARK = '=',
+           AIR       = '-',
+           SPIKE     = '^',
+           PLAYER    = '@',
+           ENEMY     = '&',
+           COIN      = '*',
+           EXIT      = 'E';
 
 /* Levels */
 
@@ -49,14 +49,14 @@ char LEVEL_2_DATA[] = {
         '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '^', '^', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
         '-', '-', '-', '-', '-', '-', '-', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
         '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '*', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '=', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '^', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
-        '-', '-', '-', '-', '-', '-', '-', '-', '*', '-', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '=', '-', '-', '-', '-', '-', '*', '-', '-', '-', '-', '#', '#', '-', '*', '-', '-', '-', '-', '-', '^', '^', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
-        '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '=', '=', '-', '-', '-', '-', '-', '-', '-', '-', '-', '^', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '=', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
-        '-', '-', '-', '-', '-', '-', '-', '-', '*', '-', '-', '-', '=', '=', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '=', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '=', '=', '-', '*', '-', '-', '-', '-', '-', '#', '#', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
-        '#', '-', '#', '-', '#', '-', '#', '-', '-', '-', '-', '-', '=', '=', '-', '-', '^', '^', '-', '-', '-', '-', '-', '#', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '=', '-', '-', '-', '-', '-', '-', '-', '-', '^', '-', '=', '=', '-', '-', '-', '#', '#', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '-', '#', '-', '#', '-', '#',
-        '#', '#', '#', '#', '#', '#', '#', '-', '-', '-', '-', '-', '=', '#', '#', '#', '#', '#', '#', '#', '-', '-', '-', '#', '-', '-', '-', '#', '#', '-', '-', '#', '#', '-', '-', '#', '=', '-', '-', '#', '#', '-', '-', '-', '#', '#', '-', '=', '=', '-', '*', '-', '#', '#', '-', '-', '#', '#', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '#', '#', '#', '#', '#',
-        '#', '#', '#', '=', '#', '#', '#', '-', '-', '-', '-', '-', '=', '=', '=', '=', '=', '=', '#', '=', '-', '-', '-', '#', '-', '-', '-', '=', '#', '=', '=', '#', '#', '=', '=', '=', '=', '-', '-', '#', '=', '-', '-', '-', '=', '#', '-', '=', '=', '-', '-', '-', '=', '=', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '#', '=', '#', '#', '#',
-        '#', '#', '=', '=', '=', '#', '#', '-', '-', '-', '-', '-', '=', '=', '=', '=', '=', '=', '#', '=', '-', '-', '-', '#', '-', '-', '-', '=', '#', '=', '=', '#', '#', '=', '=', '=', '=', '-', '-', '=', '=', '-', '-', '-', '=', '=', '-', '=', '=', '-', '*', '-', '=', '=', '-', '-', '#', '#', '-', '-', '-', '-', '^', '-', '-', '-', '^', '-', '-', '-', '-', '#', '#', '=', '=', '=', '#', '#',
-        '#', '#', '=', '=', '=', '#', '#', '-', '@', '-', '-', '-', '=', '=', '=', '=', '=', '=', '#', '=', '&', '-', '&', '=', '&', '-', '&', '=', '#', '=', '=', '#', '#', '=', '=', '#', '#', '-', '-', '=', '=', '-', '^', '-', '=', '=', '-', '=', '=', '-', '-', '-', '=', '=', '-', '-', '#', '#', '^', '^', '-', '-', '#', '-', '-', '-', '#', '-', '-', 'E', '-', '#', '#', '=', '=', '=', '#', '#',
+        '-', '-', '-', '-', '-', '-', '-', '-', '*', '-', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '=', '-', '-', '-', '-', '-', '*', '-', '-', '-', '-', '#', '#', '-', '*', '-', '-', '-', '-', '-', '^', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
+        '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '=', '=', '-', '-', '-', '-', '-', '-', '-', '-', '-', '^', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '=', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
+        '-', '-', '-', '-', '-', '-', '-', '-', '*', '-', '-', '-', '=', '=', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '=', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '=', '=', '-', '*', '-', '-', '-', '-', '-', '#', '-', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-',
+        '#', '-', '#', '-', '#', '-', '#', '-', '-', '-', '-', '-', '=', '=', '-', '-', '^', '^', '-', '-', '-', '-', '-', '#', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '=', '-', '-', '-', '-', '-', '-', '-', '-', '^', '-', '=', '=', '-', '-', '-', '#', '#', '-', '-', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '-', '#', '-', '#', '-', '#',
+        '#', '#', '#', '#', '#', '#', '#', '-', '-', '-', '-', '-', '=', '#', '#', '#', '#', '#', '#', '#', '-', '-', '-', '#', '-', '-', '-', '#', '#', '-', '-', '#', '#', '-', '-', '#', '=', '-', '-', '#', '#', '-', '-', '-', '#', '#', '-', '=', '=', '-', '*', '-', '#', '#', '-', '-', '#', '-', '-', '*', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '#', '#', '#', '#', '#',
+        '#', '#', '#', '=', '#', '#', '#', '-', '-', '-', '-', '-', '=', '=', '=', '=', '=', '=', '#', '=', '-', '-', '-', '#', '-', '-', '-', '=', '#', '=', '=', '#', '#', '=', '=', '=', '=', '-', '-', '#', '=', '-', '-', '-', '=', '#', '-', '=', '=', '-', '-', '-', '=', '=', '-', '-', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '#', '=', '#', '#', '#',
+        '#', '#', '=', '=', '=', '#', '#', '-', '-', '-', '-', '-', '=', '=', '=', '=', '=', '=', '#', '=', '-', '-', '-', '#', '-', '-', '-', '=', '#', '=', '=', '#', '#', '=', '=', '=', '=', '-', '-', '=', '=', '-', '-', '-', '=', '=', '-', '=', '=', '-', '*', '-', '=', '=', '-', '-', '#', '-', '-', '-', '-', '-', '^', '-', '-', '-', '^', '-', '-', '-', '-', '#', '#', '=', '=', '=', '#', '#',
+        '#', '#', '=', '=', '=', '#', '#', '-', '@', '-', '-', '-', '=', '=', '=', '=', '=', '=', '#', '=', '&', '-', '&', '=', '&', '-', '&', '=', '#', '=', '=', '#', '#', '=', '=', '#', '#', '-', '-', '=', '=', '-', '^', '-', '=', '=', '-', '=', '=', '-', '-', '-', '=', '=', '-', '-', '#', '^', '^', '-', '-', '-', '#', '-', '-', '-', '#', '-', '-', 'E', '-', '#', '#', '=', '=', '=', '#', '#',
         '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '=', '=', '#', '#', '=', '=', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'
 };
 
@@ -76,7 +76,7 @@ char LEVEL_3_DATA[] = {
         '#', '#', '#', '#', '#', '#', '#', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '=', '=', '*', '-', '#', '#', '-', '-', '-', '-', '#', '#', '-', '-', '=', '=', '-', '-', '#', '=', '-', '-', '=', '#', '-', '-', '#', '#', '-', '-', '#', '-', '-', '#', '-', '-', '#', '-', '-', '=', '=', '-', '-', '-', '-', '-', '-', '-', '=', '=', '-', '-', '#', '-', '-', '^', '-', '-', '-', '-', '-', '-', '#', '#', '#', '#', '#', '#', '#',
         '#', '#', '#', '=', '#', '#', '#', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '=', '=', '-', '-', '#', '#', '-', '-', '-', '-', '#', '#', '-', '-', '=', '=', '-', '-', '#', '#', '-', '-', '#', '#', '-', '-', '#', '#', '-', '-', '#', '-', '-', '#', '-', '-', '#', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '-', '-', '#', '-', '-', '^', '-', '-', '-', '#', '#', '#', '=', '#', '#', '#',
         '#', '#', '=', '=', '=', '#', '#', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '=', '=', '-', '-', '#', '#', '-', '-', '-', '-', '#', '#', '-', '-', '#', '#', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '#', '#', '-', '-', '#', '-', '-', '#', '-', '-', '#', '-', '-', '#', '#', '=', '=', '=', '=', '=', '=', '=', '#', '#', '#', '#', '#', '-', '-', '#', '-', '-', '#', '-', '-', '-', '#', '#', '=', '=', '=', '#', '#',
-        '#', '#', '=', '=', '=', '#', '#', '-', '@', '-', '-', '-', '-', '#', '#', '^', '^', '=', '=', '^', '^', '#', '#', '^', '^', '^', '^', '#', '#', '^', '^', '#', '#', '&', '-', '-', '&', '-', '-', '&', '-', '-', '&', '#', '#', '-', '-', '=', '&', '&', '=', '&', '&', '=', '-', '-', '#', '#', '=', '=', '=', '#', '=', '=', '=', '#', '#', '#', '#', '#', '#', '#', '#', '-', '-', '#', '-', 'E', '-', '#', '#', '=', '=', '=', '#', '#',
+        '#', '#', '=', '=', '=', '#', '#', '-', '@', '-', '-', '-', '-', '#', '#', '^', '^', '=', '=', '^', '^', '#', '#', '^', '^', '^', '^', '#', '#', '^', '^', '#', '#', '&', '-', '-', '&', '-', '-', '&', '-', '-', '&', '#', '#', '-', '-', '=', '&', '&', '=', '&', '&', '=', '-', '-', '#', '#', '=', '=', '#', '#', '#', '=', '=', '#', '#', '#', '#', '#', '#', '#', '#', '-', '-', '#', '-', 'E', '-', '#', '#', '=', '=', '=', '#', '#',
         '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '=', '=', '=', '=', '=', '=', '=', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'
 };
 
@@ -94,61 +94,72 @@ level LEVELS[LEVEL_COUNT] = {
 
 /* Loaded Level Data */
 
-const int MAX_LEVEL_TIME = 100 * 60;
-int level_time = MAX_LEVEL_TIME;
-
 level current_level;
 char *current_level_data;
 
+/* Timer-mechanic related */
+const int MAX_LEVEL_TIME = 50 * 60;
+int timer = MAX_LEVEL_TIME;
+inline int time_to_coin_counter = 0;
+
+/* Physics constants */
+
+inline const float PLAYER_MOVEMENT_SPEED = 0.1f;
+inline const float JUMP_STRENGTH         = 0.3f;
+inline const float CEILING_BOUNCE_OFF    = 0.05f;
+inline const float ENEMY_MOVEMENT_SPEED  = 0.07f;
+inline const float BOUNCE_OFF_ENEMY      = 0.1f;
+inline const float GRAVITY_FORCE         = 0.01f;
+
 /* Player data */
 
-const float GRAVITY_FORCE = 0.01f;
-const float JUMP_STRENGTH = 0.3f;
-const float BOUNCE_OFF_ENEMY = 0.1f;
-const float PLAYER_MOVEMENT_SPEED = 0.1f;
-const float ENEMY_MOVEMENT_SPEED = 0.07f;
-
-Vector2 player_pos;
 float player_y_velocity = 0;
+Vector2 player_pos;
 
 bool is_player_on_ground;
+bool is_looking_forward;
+bool is_moving;
 
-int player_score = 0;
+int player_level_scores[LEVEL_COUNT];
+
 const int MAX_PLAYER_LIVES = 3;
 int player_lives = MAX_PLAYER_LIVES;
+
+/* Enemy data */
 
 struct Enemy {
     Vector2 pos;
     bool is_looking_right;
 };
 
-size_t total_enemies;
-const size_t MAX_ENEMIES = 10;
+const size_t MAX_ENEMIES = 8;
 Enemy enemies[MAX_ENEMIES];
+size_t total_enemies_on_level;
 
 /* Graphic Metrics */
 
-const float SCREEN_SCALE_DIVISOR = 700.0f; // The divisor was found through experimentation
-                                           // to scale things accordingly to look pleasant.
-const float PARALLAX_PLAYER_SCROLLING_SPEED = 0.003f;
-const float PARALLAX_IDLE_SCROLLING_SPEED = 0.00005f;
-const float PARALLAX_LAYER_SPEED_DIFFERENCE = 3.0f;
+// UI
+inline const float SCREEN_SCALE_DIVISOR = 700.0f; // The divisor was found through experimentation
+                                                  // to scale things accordingly to look pleasant.
+inline Vector2 screen_size;
+inline float screen_scale; // Used to scale str/UI components size and displacements based on the screen_size size
+inline float cell_size;
+inline float horizontal_shift;
 
-Vector2 screen_size;
-Vector2 background_size;
-float background_y_offset;
-float screen_scale; // Used to scale str/UI components size and displacements based on the screen_size size
-float cell_size;
-float horizontal_shift;
+// Parallax background scrolling
+inline Vector2 background_size;
+inline float background_y_offset;
+
+inline const float PARALLAX_PLAYER_SCROLLING_SPEED = 0.003f;
+inline const float PARALLAX_IDLE_SCROLLING_SPEED = 0.00005f;
+inline const float PARALLAX_LAYER_SPEED_DIFFERENCE = 3.0f;
 
 /* Fonts */
 
-Font menu_font;
+inline Font menu_font;
 
 /* Display Text Parameters */
 
-// Going off of personal experience, a basic text class is THE building block of a raylib game
-// I hope that by providing them with this basic thingy, they'll build more sophisticated stuff from it
 struct Text {
     std::string str;
     Vector2 position = {0.50f, 0.50f};
@@ -158,52 +169,59 @@ struct Text {
     Font* font = &menu_font;
 };
 
-Text game_title = {
+inline Text game_title = {
     "Platformer",
     {0.50f, 0.50f},
     100.0f,
     RED
 };
 
-Text game_subtitle = {
+inline Text game_subtitle = {
     "Press Enter to Start",
     {0.50f, 0.65f}
 };
 
-Text game_paused = {
+inline Text game_paused = {
     "Press Escape to Resume"
 };
 
-Text death_title = {
-        "Game Over!",
+inline Text death_title = {
+        "You Died!",
         {0.50f, 0.50f},
-        100.0f,
+        80.0f,
         RED
 };
 
-Text death_subtitle = {
-        "Press Enter to Restart",
+inline Text death_subtitle = {
+        "Press Enter to Try Again",
         {0.50f, 0.65f}
 };
 
-Text victory_title = {
+inline Text game_over_title = {
+        "Game Over",
+        {0.50f, 0.50f},
+        120.0f,
+        RED
+};
+
+inline Text game_over_subtitle = {
+        "Press Enter to Restart",
+        {0.50f, 0.675f}
+};
+
+inline Text victory_title = {
     "You Won!",
     {0.50f, 0.50f},
     100.0f,
     RED
 };
 
-Text victory_subtitle = {
+inline Text victory_subtitle = {
     "Press Enter to go back to menu",
     {0.50f, 0.65f}
 };
 
 /* Images and Sprites */
-
-Texture2D wall_image;
-Texture2D wall_dark_image;
-Texture2D spike_image;
-Texture2D exit_image;
 
 struct sprite {
     size_t frame_count    = 0;
@@ -215,32 +233,39 @@ struct sprite {
     Texture2D *frames = nullptr;
 };
 
-sprite coin_sprite;
-Texture2D heart_image;
+// Level Elements
+inline Texture2D wall_image;
+inline Texture2D wall_dark_image;
+inline Texture2D spike_image;
+inline Texture2D exit_image;
+inline sprite coin_sprite;
 
-Texture2D player_stand_forward_image;
-Texture2D player_stand_backwards_image;
-Texture2D player_jump_forward_image;
-Texture2D player_jump_backwards_image;
-Texture2D player_dead_image;
-sprite player_walk_forward_sprite;
-sprite player_walk_backwards_sprite;
+// UI Elements
+inline Texture2D heart_image;
 
-sprite enemy_walk;
+// Player
+inline Texture2D player_stand_forward_image;
+inline Texture2D player_stand_backwards_image;
+inline Texture2D player_jump_forward_image;
+inline Texture2D player_jump_backwards_image;
+inline Texture2D player_dead_image;
+inline sprite player_walk_forward_sprite;
+inline sprite player_walk_backwards_sprite;
 
-Texture2D background;
-Texture2D middleground;
-Texture2D foreground;
+// Enemy
+inline sprite enemy_walk;
 
-bool is_looking_forward;
-bool is_moving;
+// World Elements
+inline Texture2D background;
+inline Texture2D middleground;
+inline Texture2D foreground;
 
 /* Sounds */
 
-Sound coin_sound;
-Sound exit_sound;
-Sound player_death_sound;
-Sound kill_enemy_sound;
+inline Sound coin_sound;
+inline Sound exit_sound;
+inline Sound player_death_sound;
+inline Sound kill_enemy_sound;
 
 /* Victory Menu Background */
 
@@ -250,17 +275,17 @@ struct victory_ball {
     float radius;
 };
 
-const size_t VICTORY_BALL_COUNT     = 2000;
-const float VICTORY_BALL_MAX_SPEED  = 2.0f;
-const float VICTORY_BALL_MIN_RADIUS = 2.0f;
-const float VICTORY_BALL_MAX_RADIUS = 3.0f;
-const Color VICTORY_BALL_COLOR      = { 180, 180, 180, 255 };
-const unsigned char VICTORY_BALL_TRAIL_TRANSPARENCY = 10;
-victory_ball victory_balls[VICTORY_BALL_COUNT];
+inline const size_t VICTORY_BALL_COUNT     = 2000;
+inline const float VICTORY_BALL_MAX_SPEED  = 2.0f;
+inline const float VICTORY_BALL_MIN_RADIUS = 2.0f;
+inline const float VICTORY_BALL_MAX_RADIUS = 3.0f;
+inline const Color VICTORY_BALL_COLOR      = { 180, 180, 180, 255 };
+inline const unsigned char VICTORY_BALL_TRAIL_TRANSPARENCY = 10;
+inline victory_ball victory_balls[VICTORY_BALL_COUNT];
 
 /* Frame Counter */
 
-size_t game_frame = 0;
+inline size_t game_frame = 0;
 
 /* Game States */
 
@@ -272,7 +297,7 @@ enum game_state {
     GAME_OVER_STATE,
     VICTORY_STATE
 };
-game_state game_state = MENU_STATE;
+inline game_state game_state = MENU_STATE;
 
 /* Forward Declarations */
 
@@ -280,12 +305,16 @@ game_state game_state = MENU_STATE;
 
 void draw_text(Text &text);
 void derive_graphics_metrics_from_loaded_level();
-void draw_menu();
 void draw_game_overlay();
 void draw_level();
 void draw_player();
 void draw_enemies();
+void draw_menu();
+
 void draw_pause_menu();
+void draw_death_screen();
+void draw_game_over_menu();
+
 void create_victory_menu_background();
 void animate_victory_menu_background();
 void draw_victory_menu_background();
@@ -293,25 +322,37 @@ void draw_victory_menu();
 
 // LEVEL_H
 
-bool is_colliding(Vector2 pos, char look_for = '#', level &level = current_level);
-char& get_collider(Vector2 pos, char look_for, level &level = current_level);
+bool is_colliding(Vector2 pos, char look_for = '#');
+char& get_collider(Vector2 pos, char look_for);
 
+void reset_level_index();
 void load_level(int offset = 0);
 void unload_level();
 
+char& get_level_cell(size_t row, size_t column);
+void set_level_cell(size_t row, size_t column, char chr);
+
 // PLAYER_H
 
+void reset_player_stats();
+void increment_player_score();
+int get_total_player_score();
+
 void spawn_player();
+void kill_player();
+
 void move_player_horizontally(float delta);
 void update_player();
 void update_player_gravity();
 
 // ENEMY_H
 
+void spawn_enemies();
+
+void update_enemies();
+
 bool is_colliding_with_enemies(Vector2 pos);
 void remove_colliding_enemy(Vector2 pos);
-void spawn_enemies();
-void update_enemies();
 
 // ASSETS_H
 
