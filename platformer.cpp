@@ -29,7 +29,7 @@ void update_game() {
                 move_player_horizontally(-PLAYER_MOVEMENT_SPEED);
             }
 
-            // Calculating collisions to decide whether the player is allowed to jump: don't want them to suction cup to the ceiling or jump midair
+            // Calculating collisions to decide whether the player is allowed to jump
             is_player_on_ground = is_colliding({player_pos.x, player_pos.y + 0.1f}, WALL);
             if ((IsKeyDown(KEY_UP) || IsKeyDown(KEY_W) || IsKeyDown(KEY_SPACE)) && is_player_on_ground) {
                 player_y_velocity = -JUMP_STRENGTH;

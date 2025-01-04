@@ -255,7 +255,7 @@ inline sprite player_walk_backwards_sprite;
 // Enemy
 inline sprite enemy_walk;
 
-// World Elements
+// Background Elements
 inline Texture2D background;
 inline Texture2D middleground;
 inline Texture2D foreground;
@@ -266,6 +266,7 @@ inline Sound coin_sound;
 inline Sound exit_sound;
 inline Sound player_death_sound;
 inline Sound kill_enemy_sound;
+inline Sound game_over_sound;
 
 /* Victory Menu Background */
 

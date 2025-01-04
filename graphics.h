@@ -68,24 +68,27 @@ void draw_parallax_background() {
 }
 
 void draw_game_overlay() {
-    float ICON_SIZE = 48.0f;
-    ICON_SIZE*=screen_scale;
+    float icon_size = 48.0f;
+    icon_size*=screen_scale;
+
+    float slight_vertical_offset = 8.0f;
+    slight_vertical_offset*=screen_scale;
 
     // Hearts
     for (int i = 0; i < player_lives; i++) {
-        draw_image(heart_image, {ICON_SIZE*i+ICON_SIZE/12.0f, 0}, ICON_SIZE);
+        draw_image(heart_image, {icon_size * i + icon_size / 12.0f, slight_vertical_offset}, icon_size);
     }
 
     // Timer
-    Vector2 timer_dimensions = MeasureTextEx(menu_font, std::to_string(timer / 60).c_str(), ICON_SIZE, 2.0f);
-    Vector2 timer_position = {(GetRenderWidth() - timer_dimensions.x) * 0.5f, 0};
-    DrawTextEx(menu_font, std::to_string(timer / 60).c_str(), timer_position, ICON_SIZE, 2.0f, WHITE);
+    Vector2 timer_dimensions = MeasureTextEx(menu_font, std::to_string(timer / 60).c_str(), icon_size, 2.0f);
+    Vector2 timer_position = {(GetRenderWidth() - timer_dimensions.x) * 0.5f, slight_vertical_offset};
+    DrawTextEx(menu_font, std::to_string(timer / 60).c_str(), timer_position, icon_size, 2.0f, WHITE);
 
     // Score
-    Vector2 score_dimensions = MeasureTextEx(menu_font, std::to_string(get_total_player_score()).c_str(), ICON_SIZE, 2.0f);
-    Vector2 score_position = {GetRenderWidth() - score_dimensions.x - ICON_SIZE, 0};
-    DrawTextEx(menu_font, std::to_string(get_total_player_score()).c_str(), score_position, ICON_SIZE, 2.0f, WHITE);
-    draw_sprite(coin_sprite, {GetRenderWidth() - ICON_SIZE, 0}, ICON_SIZE);
+    Vector2 score_dimensions = MeasureTextEx(menu_font, std::to_string(get_total_player_score()).c_str(), icon_size, 2.0f);
+    Vector2 score_position = {GetRenderWidth() - score_dimensions.x - icon_size, slight_vertical_offset};
+    DrawTextEx(menu_font, std::to_string(get_total_player_score()).c_str(), score_position, icon_size, 2.0f, WHITE);
+    draw_sprite(coin_sprite, {GetRenderWidth() - icon_size, slight_vertical_offset}, icon_size);
 }
 
 void draw_level() {

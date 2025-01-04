@@ -41,8 +41,26 @@ void load_images() {
 
 void unload_images() {
     UnloadTexture(wall_image);
+    UnloadTexture(wall_dark_image);
+    UnloadTexture(spike_image);
     UnloadTexture(exit_image);
+
     unload_sprite(coin_sprite);
+    UnloadTexture(heart_image);
+
+    UnloadTexture(player_stand_forward_image);
+    UnloadTexture(player_stand_backwards_image);
+    UnloadTexture(player_jump_forward_image);
+    UnloadTexture(player_jump_backwards_image);
+    UnloadTexture(player_dead_image);
+    unload_sprite(player_walk_forward_sprite);
+    unload_sprite(player_walk_backwards_sprite);
+
+    unload_sprite(enemy_walk);
+
+    UnloadTexture(background);
+    UnloadTexture(middleground);
+    UnloadTexture(foreground);
 }
 
 void draw_image(Texture2D image, Vector2 pos, float size) {
@@ -119,15 +137,19 @@ void draw_sprite(sprite &sprite, Vector2 pos, float width, float height) {
 }
 
 void load_sounds() {
-    coin_sound = LoadSound("data/sounds/coin.wav");
-    exit_sound = LoadSound("data/sounds/exit.wav");
-    kill_enemy_sound = LoadSound("data/sounds/kill_enemy.wav");
+    coin_sound         = LoadSound("data/sounds/coin.wav");
+    exit_sound         = LoadSound("data/sounds/exit.wav");
+    kill_enemy_sound   = LoadSound("data/sounds/kill_enemy.wav");
     player_death_sound = LoadSound("data/sounds/player_death.wav");
+    game_over_sound    = LoadSound("data/sounds/game_over.wav");
 }
 
 void unload_sounds() {
     UnloadSound(coin_sound);
     UnloadSound(exit_sound);
+    UnloadSound(kill_enemy_sound);
+    UnloadSound(player_death_sound);
+    UnloadSound(game_over_sound);
 }
 
 #endif // IMAGES_H
