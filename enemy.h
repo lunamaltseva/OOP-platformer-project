@@ -6,7 +6,7 @@
 
 void spawn_enemies() {
     // Create enemies, incrementing their amount every time a new one is created
-    total_enemies_on_level = 0;
+    enemies.clear();
 
     for (size_t row = 0; row < current_level.rows; ++row) {
         for (size_t column = 0; column < current_level.columns; ++column) {
@@ -14,11 +14,10 @@ void spawn_enemies() {
 
             if (cell == ENEMY) {
                 // Instantiate and add an enemy to the level
-                enemies[total_enemies_on_level] = {
+                enemies.push_back({
                         {static_cast<float>(column), static_cast<float>(row)},
                         true
-                };
-                total_enemies_on_level++;
+                });
 
                 set_level_cell(row, column, AIR);
             }
@@ -27,11 +26,8 @@ void spawn_enemies() {
 }
 
 void update_enemies() {
-    for (int i = 0; i < total_enemies_on_level; i++) {
-        // Get the enemy
-        Enemy& enemy = enemies[i];
-
-        // Find its next x
+    for (auto &enemy : enemies) {
+        // Find the enemy's next x
         float next_x = enemy.pos.x;
         next_x += ( enemy.is_looking_right ? ENEMY_MOVEMENT_SPEED : -ENEMY_MOVEMENT_SPEED);
 
@@ -50,8 +46,8 @@ void update_enemies() {
 bool is_colliding_with_enemies(Vector2 pos) {
     Rectangle entity_hitbox = {pos.x, pos.y, 1.0f, 1.0f};
 
-    for (int i = 0; i < total_enemies_on_level; i++) {
-        Rectangle enemy_hitbox = {(float) enemies[i].pos.x, (float) enemies[i].pos.y, 1.0f, 1.0f};
+    for (auto &enemy : enemies) {
+        Rectangle enemy_hitbox = {(float) enemy.pos.x, (float) enemy.pos.y, 1.0f, 1.0f};
         if (CheckCollisionRecs(entity_hitbox, enemy_hitbox)) {
             return true;
         }
@@ -62,14 +58,11 @@ bool is_colliding_with_enemies(Vector2 pos) {
 void remove_colliding_enemy(Vector2 pos) {
     Rectangle entity_hitbox = {pos.x, pos.y, 1.0f, 1.0f};
 
-    for (int i = 0; i < total_enemies_on_level; i++) {
-        Rectangle enemy_hitbox = {(float) enemies[i].pos.x, (float) enemies[i].pos.y, 1.0f, 1.0f};
+    for (auto it = enemies.begin(); it != enemies.end(); it++) {
+        Rectangle enemy_hitbox = {(float) it->pos.x, (float) it->pos.y, 1.0f, 1.0f};
         // Overwrite the enemy by shifting all following enemies to the left
         if (CheckCollisionRecs(entity_hitbox, enemy_hitbox)) {
-            for (int j = i + 1; j < MAX_ENEMIES; j++) {
-                enemies[j - 1] = enemies[j];
-            }
-            total_enemies_on_level--;
+            enemies.erase(it);
             return;
         }
     }

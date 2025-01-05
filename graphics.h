@@ -162,12 +162,12 @@ void draw_player() {
 
 void draw_enemies() {
     // Go over all enemies and draw them, once again accounting to the player's movement and horizontal shift
-    for (int i = 0; i < total_enemies_on_level; i++) {
+    for (auto &enemy : enemies) {
         horizontal_shift = (screen_size.x - cell_size) / 2;
 
         Vector2 pos = {
-                (enemies[i].pos.x - player_pos.x) * cell_size + horizontal_shift,
-                enemies[i].pos.y * cell_size
+                (enemy.pos.x - player_pos.x) * cell_size + horizontal_shift,
+                enemy.pos.y * cell_size
         };
 
         draw_sprite(enemy_walk, pos, cell_size);
