@@ -29,7 +29,7 @@ void update_enemies() {
     for (auto &enemy : enemies) {
         // Find the enemy's next x
         float next_x = enemy.pos.x;
-        next_x += ( enemy.is_looking_right ? ENEMY_MOVEMENT_SPEED : -ENEMY_MOVEMENT_SPEED);
+        next_x += (enemy.is_looking_right ? ENEMY_MOVEMENT_SPEED : -ENEMY_MOVEMENT_SPEED);
 
         // If its next position collides with a wall, turn around
         if (is_colliding({next_x, enemy.pos.y}, WALL)) {
@@ -60,7 +60,7 @@ void remove_colliding_enemy(Vector2 pos) {
 
     for (auto it = enemies.begin(); it != enemies.end(); it++) {
         Rectangle enemy_hitbox = {(float) it->pos.x, (float) it->pos.y, 1.0f, 1.0f};
-        // Overwrite the enemy by shifting all following enemies to the left
+        // Erase one colliding enemy
         if (CheckCollisionRecs(entity_hitbox, enemy_hitbox)) {
             enemies.erase(it);
             return;

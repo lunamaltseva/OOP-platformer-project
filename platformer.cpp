@@ -59,6 +59,7 @@ void update_game() {
                 }
                 else {
                     game_state = GAME_OVER_STATE;
+                    PlaySound(game_over_sound);
                 }
             }
             break;

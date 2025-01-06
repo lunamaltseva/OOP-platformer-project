@@ -27,9 +27,13 @@ To successfully complete this project, students are encouraged to familiarize th
 
 Doing so will simplify and ease the process of redesigning procedural code into object-oriented code.
 
-<h2 align=center> Run-Length Encoding </h2>
+<h2 align=center> Attachments </h2>
 
-This project utilizes RLE to encode levels, making them compact and efficient.
+---
+
+<h3 align=center> Run-Length Encoding </h3>
+
+This project utilizes RLE to encode levels, increasing compactness and efficiency. Level elements are represented by the following elements:
 
 | Puzzle Element | Character | ASCII code |
 |:---------------|:----------|:-----------|
@@ -41,9 +45,9 @@ This project utilizes RLE to encode levels, making them compact and efficient.
 | Spike          | ^         | 0x5E       |
 | Enemy          | &         | 0x26       |
 
-In this format digits show how many elements of the same type are following;
+In the RLE format, digits are used to show how many elements of the same type are following; as such:
 
-`---- becomes 4-`
+`---- becomes 4-`.
 
 So the following level,
 ```
@@ -60,11 +64,13 @@ looks like this with RLE:
 
 `7-|3-*3-|7-|7-|7-|@-3^-e|7#`.
 
-The rows of the level are separated by `|`s (vertical bars).
+The rows of the level are separated by vertical bars (`|`s).
 
-<h2 align=center> Implementation Tips </h2>
+---
 
-- You need to implement three classes: Level, Player, and Enemy. Level is the hardest, Enemy is the easiest. So, go with player first.
+<h3 align=center> Implementation Tips </h3>
+
+- You need to implement three classes: `Level`, `Player`, and `Enemy`.
 - In your `class.h` files, exclusively use forward declarations—do not implement functions. Furthermore, try to only include `"raylib.h"` in your `.h` files.
 - In your `class.cpp` files, however, you may include anything and everything you desire.
 - Use the `inline` keyword on variables that are included in more than one `.cpp` file—like `globals.h`—to avoid redefinitions.
@@ -74,4 +80,5 @@ The rows of the level are separated by `|`s (vertical bars).
 - Use the debug tool to resolve crashes.
 
 ---
+
 <h5 align=center> by @lunamaltseva </h5>
